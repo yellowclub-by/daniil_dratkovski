@@ -2,7 +2,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram import types, Router, F
 from aiogram.types import reply_markup_union
 
-from daniil_dratkovski.keyboards import reply
+from keyboards import reply
 
 user_router = Router()
 
