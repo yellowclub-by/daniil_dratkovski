@@ -30,7 +30,7 @@ async def info(message: types.message):
 @user_router.message(F.text.lower().contains('поиск'))
 @user_router.message(Command('search'))
 async def search(message: types.message):
-    await message.answer('рамштайн нэвэр дай')
+    await message.answer('рамштайн нэвэр дай',reply_markup=reply.search_kb)
 
 # @user_router.message(F.text) # фильтр текста
 # @user_router.message(F.image) # фильтр kamtinki
@@ -41,3 +41,8 @@ async def search(message: types.message):
 # @user_router.message(F.text.lower().startswith("как") | F.text.lower().endwith("?"))
 async def echo(message: types.Message):
     await message.answer('Limosa')
+
+@user_router.message('donate')
+@user_router.message(F.text.lower().contains("донат"))
+async def donate(message: types.message):
+    await message.answer('pls donate')
