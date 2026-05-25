@@ -1,4 +1,4 @@
-from aiogragm import Bot, Dispatcher
+from aiogram import Bot, Dispatcher
 import asyncio
 
 from handlers.user_private import user_router

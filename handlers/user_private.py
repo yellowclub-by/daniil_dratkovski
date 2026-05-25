@@ -2,7 +2,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram import types, Router, F
 from aiogram.types import reply_markup_union, FSInputFile
 
-from keyboards import reply
+from keyboards import reply, inline
 
 user_router = Router()
 
@@ -33,9 +33,12 @@ async def info(message: types.message):
 @user_router.message(F.text.lower().contains("иск"))
 @user_router.message(F.text.lower().contains('поиск'))
 @user_router.message(Command('search'))
-async def search(message: types.message):
-    await message.answer('рамштайн нэвэр дай', reply_markup=reply.search_kb)
+async def search(message: types.Message):
+    await message.answer('<b>Название:бр бр стринг</b>', parse_mode="HTML", reply_markup=reply.search_kb)
 
+@user_router.message(Command('search2'))
+async def answer_search(message: types.Message):
+    await message.answer('Вот что удалось найти:', reply_markup=inline.inline_kb)
 
 # @user_router.message(F.text) # фильтр текста
 # @user_router.message(F.image) # фильтр kamtinki
