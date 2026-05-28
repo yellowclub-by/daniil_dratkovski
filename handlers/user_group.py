@@ -1,7 +1,7 @@
 from aiogram import Router, F, types
 
 group_router = Router()
-restricted_words = ["какашка", "лох", "дуралей", "дебил", "глупый", "не хороший человек", "вонючка", "педик"]
+restricted_words = ["какашка", "лох", "дуралей", "глупый", "не хороший человек", "вонючка"]
 
 
 @group_router.message(F.text)

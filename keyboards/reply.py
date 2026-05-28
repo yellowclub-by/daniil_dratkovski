@@ -6,7 +6,7 @@ main_kb = ReplyKeyboardMarkup(
     [
         [KeyboardButton(text="поиск музыки"), KeyboardButton(text="информация о боте")],
         [KeyboardButton(text='донат')]
-    ], resize_keyboard=True, input_field_placeholder='biba'
+    ], resize_keyboard=True, input_field_placeholder='Poisk'
 )
 
 start_kb = ReplyKeyboardMarkup(

@@ -43,7 +43,7 @@ async def answer_search(message: types.Message):
 # @user_router.message(F.text) # фильтр текста
 # @user_router.message(F.image) # фильтр kamtinki
 # @user_router.message(F.text.lower() == 'дистивка') # фильтр konkritnigo texsty
-# @user_router.message(F.text.lower().contains('Lamosa')) # фильтр po zovderjaniy
+# @user_router.message(F.text.lower().contains('Lamosa')) # фильтр
 # @user_router.message(F.text.lower().endswith("?"))
 # @user_router.message(F.text.lower().startswith("как"), F.text.lower().endwith("?"))
 # @user_router.message(F.text.lower().startswith("как") | F.text.lower().endwith("?"))
